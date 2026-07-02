@@ -1,4 +1,4 @@
-# PFGAtest
+# Q2
 
 核心目標：利用 Python 結合電腦視覺技術，在動態影片中自動化地精準框選硬幣、標示其圓心，並動態輸出其像素座標。
 技術限制：每影格處理時間必須小於等於 0.1 秒(100ms)，且所有偵測與座標標示流程必須完全自動化。
@@ -8,12 +8,7 @@
 預處理去噪：將彩色影像轉為灰階，並套用高斯模糊。目的是消除攝影機雜訊與環境光影產生的毛邊，避免邊緣偵測時產生誤判。
 特徵提取與偵測：使用霍夫圓變換此演算法。
 
-使用AI的提示詞
-:
+使用AI的提示詞:
 
-我要將一段影片用python寫,偵測影片,並將影片中的硬幣框出來,我要流程圖
-我要用霍夫圓變換抓取影像中的圓
-我現在想做將描繪外型圓圈變成正方形，請用教導的方式引導，不要直接給我答案
-Processing time per frame ≤ 0.1 s
 
-<img width="476" height="266" alt="Q1_GIF" src="https://github.com/user-attachments/assets/6fac4133-2885-4129-b8ec-90f6d107d2f0" />
+<img width="1480" height="243" alt="image" src="https://github.com/user-attachments/assets/90fab0c4-cfa5-4571-8405-5a668e79de1b" />
