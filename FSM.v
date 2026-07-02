@@ -6,7 +6,6 @@ module FSM(
     output reg [1:0] light  // 00=Green, 01=Yellow, 10=Red
 );
 
-    // �����儔
     parameter GREEN  = 2'b00;
     parameter YELLOW = 2'b01;
     parameter RED    = 2'b10;
