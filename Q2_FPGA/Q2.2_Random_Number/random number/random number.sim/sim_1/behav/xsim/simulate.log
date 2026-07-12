@@ -1,0 +1,15 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Time=0 | enable=0 | rand_out=0
+Time=10000 | enable=1 | rand_out=0
+Time=15000 | enable=1 | rand_out=1
+Time=25000 | enable=1 | rand_out=3
+Time=35000 | enable=1 | rand_out=2
+Time=45000 | enable=1 | rand_out=1
+Time=55000 | enable=1 | rand_out=3
+Time=75000 | enable=1 | rand_out=2
+Time=85000 | enable=1 | rand_out=1
+Time=95000 | enable=1 | rand_out=2
+Time=105000 | enable=1 | rand_out=1
+Time=110000 | enable=0 | rand_out=1
+$finish called at time : 130 ns : File "D:/vivado/FPGA/random number/random number.srcs/sim_1/new/CRC5_RNG_tb.v" Line 31

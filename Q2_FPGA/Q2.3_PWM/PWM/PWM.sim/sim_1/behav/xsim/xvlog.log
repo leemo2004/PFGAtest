@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/FPGA/PWM/PWM.srcs/sources_1/new/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PWM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/FPGA/PWM/PWM.srcs/sim_1/new/PWM_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PWM_tb

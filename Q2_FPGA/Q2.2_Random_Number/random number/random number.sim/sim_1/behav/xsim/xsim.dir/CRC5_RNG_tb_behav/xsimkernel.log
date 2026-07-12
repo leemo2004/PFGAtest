@@ -1,0 +1,7 @@
+Running: xsim.dir/CRC5_RNG_tb_behav/xsimk.exe -simmode gui -wdb CRC5_RNG_tb_behav.wdb -simrunnum 0 -socket 1644
+Design successfully loaded
+Design Loading Memory Usage: 8260 KB (Peak: 8260 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 9128 KB (Peak: 9128 KB)
+Simulation CPU Usage: 0 ms

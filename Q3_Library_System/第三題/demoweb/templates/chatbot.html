@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>📚 圖書館客服聊天機器人</h1>
+
+<div style="max-width: 600px;">
+
+    <!-- 對話紀錄區 -->
+    <div style="
+        border: 1px solid #ddd;
+        padding: 15px;
+        height: 400px;
+        overflow-y: auto;
+        margin-bottom: 15px;
+        background: #f9f9f9;
+        border-radius: 8px;">
+
+        <p style="color: #888;">👋 您好！我是圖書館客服助理，請問有什麼可以幫您？</p>
+
+        {% if user_message %}
+            <div style="
+                background: #333;
+                color: white;
+                padding: 10px;
+                border-radius: 8px;
+                margin-top: 10px;
+                text-align: right;">
+                <strong>👤 您：</strong>{{ user_message }}
+            </div>
+
+            <div style="
+                background: #e3f2fd;
+                padding: 10px;
+                border-radius: 8px;
+                margin-top: 10px;">
+                <strong>🤖 助理：</strong>{{ response }}
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- 輸入區 -->
+    <form method="POST">
+        {% csrf_token %}
+        <div style="display: flex; gap: 10px;">
+            <input
+                type="text"
+                name="message"
+                placeholder="請輸入您的問題..."
+                style="
+                    flex: 1;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 8px;"
+                required>
+            <button
+                type="submit"
+                style="
+                    padding: 10px 20px;
+                    background: #333;
+                    color: white;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;">
+                送出
+            </button>
+        </div>
+    </form>
+
+    <!-- 常見問題快捷按鈕 -->
+    <div style="margin-top: 15px;">
+        <p><strong>常見問題：</strong></p>
+        <form method="POST" style="display:inline;">
+            {% csrf_token %}
+            <input type="hidden" name="message" value="借書規則是什麼？">
+            <button type="submit" style="margin: 5px; padding: 5px 10px; cursor: pointer;">
+                借書規則
+            </button>
+        </form>
+        <form method="POST" style="display:inline;">
+            {% csrf_token %}
+            <input type="hidden" name="message" value="書逾期了怎麼辦？">
+            <button type="submit" style="margin: 5px; padding: 5px 10px; cursor: pointer;">
+                逾期怎麼辦
+            </button>
+        </form>
+        <form method="POST" style="display:inline;">
+            {% csrf_token %}
+            <input type="hidden" name="message" value="圖書館開放時間是？">
+            <button type="submit" style="margin: 5px; padding: 5px 10px; cursor: pointer;">
+                開放時間
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

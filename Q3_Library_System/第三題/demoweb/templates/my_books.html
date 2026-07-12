@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>我的借閱記錄</h1>
+<table>
+    <tr>
+        <th>書名</th>
+        <th>借閱日期</th>
+        <th>到期日期</th>
+        <th>狀態</th>
+        <th>操作</th>
+    </tr>
+    {% for record in records %}
+    <tr>
+        <td>{{ record.book.title }}</td>
+        <td>{{ record.borrow_date|date:"Y-m-d" }}</td>
+        <td>{{ record.due_date|date:"Y-m-d" }}</td>
+        <td>
+            {% if record.is_overdue %}
+                <span class="overdue">⚠️ 逾期</span>
+            {% else %}
+                借閱中
+            {% endif %}
+        </td>
+        <td>
+            <a href="/return/{{ record.id }}/"><button>還書</button></a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

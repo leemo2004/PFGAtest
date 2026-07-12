@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>書籍目錄</h1>
+<table>
+    <tr>
+        <th>書名</th>
+        <th>作者</th>
+        <th>ISBN</th>
+        <th>可借數量</th>
+        <th>操作</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.isbn }}</td>
+        <td>{{ book.available }} / {{ book.quantity }}</td>
+        <td>
+            {% if user.is_authenticated and book.available > 0 %}
+                <a href="/borrow/{{ book.id }}/"><button>借書</button></a>
+            {% elif book.available == 0 %}
+                已借完
+            {% else %}
+                <a href="/login/"><button>登入後借書</button></a>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

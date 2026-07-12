@@ -1,0 +1,11 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Time=0 | light=00 ( GREEN)
+Time=95000 | light=01 (YELLOW)
+Time=115000 | light=10 (   RED)
+Time=215000 | light=00 ( GREEN)
+Time=295000 | light=01 (YELLOW)
+Time=315000 | light=10 (   RED)
+Time=415000 | light=00 ( GREEN)
+Time=495000 | light=01 (YELLOW)
+$finish called at time : 510 ns : File "D:/vivado/FPGA/traffic light/traffic light.srcs/sim_1/new/FSM_tb.v" Line 25
