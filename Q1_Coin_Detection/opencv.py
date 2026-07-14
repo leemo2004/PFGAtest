@@ -3,7 +3,6 @@ import numpy as np
 import time
 cap = cv2.VideoCapture('coin.mp4')
 
-
 while True:
     ret, frame = cap.read()
     start_time = time.time()
@@ -57,7 +56,6 @@ while True:
             text_color,                # 顏色
             2                        
         )
-
         cv2.imshow('frame', frame)
         cv2.imshow("Gray", gray)
     else:
